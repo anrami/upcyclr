@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const projectSchema = new mongoose.Schema({
+const bookSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -29,17 +29,17 @@ const projectSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  category: {
+  author: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
-    ref: 'Category'
+    ref: 'Author'
   }
 })
 
-projectSchema.virtual('coverImagePath').get(function() {
+bookSchema.virtual('coverImagePath').get(function() {
   if (this.coverImage != null && this.coverImageType != null) {
     return `data:${this.coverImageType};charset=utf-8;base64,${this.coverImage.toString('base64')}`
   }
 })
 
-module.exports = mongoose.model('Project', projectSchema)
+module.exports = mongoose.model('Book', bookSchema)

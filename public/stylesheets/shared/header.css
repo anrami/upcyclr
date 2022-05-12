@@ -1,14 +1,15 @@
 :root {
-  --nav-title-font-size: 3rem;
+  --nav-title-font-size: 2.6rem;
   --nav-title-font-weight: bold;
-  --nav-link-font-weight: 300;
+  --nav-link-font-weight: 400;
 }
 
 .header-title {
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
   text-decoration: none;
   font-size: var(--nav-title-font-size);
   font-weight: var(--nav-title-font-weight);
+  letter-spacing: -0.02em;
 }
 
 .header-nav {
@@ -17,6 +18,11 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5rem;
+  background-color: white;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .header-nav ul {
@@ -31,11 +37,11 @@
 
 .header-nav li a {
   text-decoration: none;
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
   font-weight: var(--nav-link-font-weight);
   padding: 1rem;
 }
 
 .header-nav li a:hover, .header-title:hover {
-  color: white;
+  color: #bbc5ba;
 }

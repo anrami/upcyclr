@@ -1,21 +1,21 @@
 :root {
-  --color-btn-primary-background: hsl(var(--color-base-hue), 100%, 83%);
-  --color-btn-primary-background-dark: hsl(var(--color-base-hue), 100%, 73%);
-  --color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
-  --color-btn-primary-text-dark: hsl(var(--color-base-hue), 100%, 10%);
-  --color-btn-border: black;
+  --color-btn-primary-background: #1c3c34;
+  --color-btn-primary-background-dark: #1c3c34;
+  --color-btn-primary-text: white;
+  --color-btn-primary-text-dark: white;
+  --color-btn-border: #1c3c34;
   --color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 83%);
-  --color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 73%);
-  --color-btn-danger-text: black;
-  --color-btn-danger-text-dark: black;
+  --color-btn-danger-background-dark: #1c3c34;
+  --color-btn-danger-text: #1c3c34;
+  --color-btn-danger-text-dark: #1c3c34;
 }
 
 .btn {
   border: 1px solid var(--color-btn-border);
-  border-radius: .5rem;
+  border-radius: .3rem;
   padding: .5rem 1rem;
   font-size: 1.2rem;
-  font-family: 'Gotham Rounded';
+  font-family: 'Rasa';
   cursor: pointer;
   text-decoration: none;
   text-align: center;
@@ -41,7 +41,9 @@
 
 .btn-primary:hover {
   color: var(--color-btn-primary-text-dark);
-  background-color: var(--color-btn-primary-background-dark);
+  background-color: #bbc5ba;
+  border-color: #bbc5ba;
+
 }
 
 .btn-danger {
@@ -50,6 +52,7 @@
 }
 
 .btn-danger:hover {
-  color: var(--color-btn-danger-text-dark);
-  background-color: var(--color-btn-danger-background-dark);
+  color: var(--color-btn-primary-text-dark);
+  background-color: #bbc5ba;
+  border-color: #bbc5ba;
 }
