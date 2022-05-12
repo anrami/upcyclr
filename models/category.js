@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Book = require('./book')
+const Project = require('./project')
 
 const categorySchema = new mongoose.Schema({
   name: {
@@ -9,11 +9,11 @@ const categorySchema = new mongoose.Schema({
 })
 
 categorySchema.pre('remove', function(next) {
-  Book.find({ category: this.id }, (err, books) => {
+  Project.find({ category: this.id }, (err, projects) => {
     if (err) {
       next(err)
-    } else if (books.length > 0) {
-      next(new Error('This category has books still'))
+    } else if (projects.length > 0) {
+      next(new Error('This category has projects still'))
     } else {
       next()
     }

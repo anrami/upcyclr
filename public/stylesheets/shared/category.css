@@ -1,40 +1,40 @@
 :root {
-  --book-cover-width: 200px;
-  --book-cover-width-large: 325px;
-  --book-cover-aspect-ratio: 0.75;
+  --project-cover-width: 200px;
+  --project-cover-width-large: 325px;
+  --project-cover-aspect-ratio: 0.75;
 }
 
-.book-cover {
-  width: var(--book-cover-width);
-  height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
+.project-cover {
+  width: var(--project-cover-width);
+  height: calc(var(--project-cover-width) / var(--project-cover-aspect-ratio));
 }
 
-.book-cover-large {
-  --book-cover-width: var(--book-cover-width-large);
+.project-cover-large {
+  --project-cover-width: var(--project-cover-width-large);
 }
 
-.book-grid {
+.project-grid {
   display: grid;
   justify-content: center;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, var(--book-cover-width));
+  grid-template-columns: repeat(auto-fill, var(--project-cover-width));
 }
 
-.book-grid-large {
-  grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+.project-grid-large {
+  grid-template-columns: repeat(auto-fill, var(--project-cover-width-large));
 }
 
-.book-details {
+.project-details {
   display: flex;
 }
 
-.book-details-label {
+.project-details-label {
   font-size: 1.2rem;
   font-weight: 500;
   align-self: flex-start;
 }
 
-.book-details-grid {
+.project-details-grid {
   display: grid;
   align-content: flex-start;
   align-items: center;
@@ -42,7 +42,7 @@
   grid-template-columns: auto auto;
 }
 
-.book-details-btn-grid {
+.project-details-btn-grid {
   display: grid;
   justify-items: flex-start;
   align-items: flex-start;
@@ -54,7 +54,7 @@
   margin-top: .5rem;
 }
 
-.book-details-category-button {
+.project-details-category-button {
   grid-area: category;
   justify-self: stretch;
 }

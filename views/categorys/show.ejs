@@ -4,7 +4,7 @@
   <%- include('../partials/deleteForm',
               { url: `/categorys/${category.id}` }) %>
 </div>
-<% if (booksByCategory.length > 0) { %>
-  <h2 class="page-header">Books By Category</h2>
-  <%- include('../partials/bookGrid', { books: booksByCategory }) %>
+<% if (projectsByCategory.length > 0) { %>
+  <h2 class="page-header">Projects By Category</h2>
+  <%- include('../partials/projectGrid', { projects: projectsByCategory }) %>
 <% } %>

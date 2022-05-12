@@ -1,15 +1,15 @@
 const express = require('express')
 const router = express.Router()
-const Book = require('../models/book')
+const Project = require('../models/project')
 
 router.get('/', async (req, res) => {
-  let books
+  let projects
   try {
-    books = await Book.find().sort({ createdAt: 'desc' }).limit(10).exec()
+    projects = await Project.find().sort({ createdAt: 'desc' }).limit(10).exec()
   } catch {
-    books = []
+    projects = []
   }
-  res.render('index', { books: books })
+  res.render('index', { projects: projects })
 })
 
 module.exports = router

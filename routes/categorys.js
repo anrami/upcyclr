@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Category = require('../models/category')
-const Book = require('../models/book')
+const Project = require('../models/project')
 
 // All Categorys Route
 router.get('/', async (req, res) => {
@@ -44,10 +44,10 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const category = await Category.findById(req.params.id)
-    const books = await Book.find({ category: category.id }).limit(6).exec()
+    const projects = await Project.find({ category: category.id }).limit(6).exec()
     res.render('categorys/show', {
       category: category,
-      booksByCategory: books
+      projectsByCategory: projects
     })
   } catch {
     res.redirect('/')

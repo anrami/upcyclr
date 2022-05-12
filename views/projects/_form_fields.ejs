@@ -1,13 +1,13 @@
 <div class="form-row">
   <div class="form-item">
     <label>Title</label>
-    <input type="text" name="title" value="<%= book.title %>">
+    <input type="text" name="title" value="<%= project.title %>">
   </div>
   <div class="form-item">
     <label>Category</label>
     <select name="category">
       <% categorys.forEach(category => { %>
-        <% if (category.id === book.category) { %>
+        <% if (category.id === project.category) { %>
           <option selected label="<%= category.name %>" value="<%= category.id %>">
         <% } else { %>
           <option label="<%= category.name %>" value="<%= category.id %>">
@@ -21,21 +21,21 @@
   <div class="form-item">
     <label>Publish Date</label>
     <input type="date" name="publishDate"
-          value="<%= book.publishDate == null ? '' : book.publishDate.toISOString().split('T')[0] %>">
+          value="<%= project.publishDate == null ? '' : project.publishDate.toISOString().split('T')[0] %>">
   </div>
   <div class="form-item">
     <label>Page Count</label>
-    <input type="number" name="pageCount" min="1" value="<%= book.pageCount %>">
+    <input type="number" name="pageCount" min="1" value="<%= project.pageCount %>">
   </div>
 </div>
 
 <div class="form-row">
   <div class="form-item form-item-no-grow">
     <label>Cover</label>
-    <input type="file" name="cover" class="book-cover filepond">
+    <input type="file" name="cover" class="project-cover filepond">
   </div>
   <div class="form-item">
     <label>Description</label>
-    <textarea name="description"><%= book.description %></textarea>
+    <textarea name="description"><%= project.description %></textarea>
   </div>
 </div>
