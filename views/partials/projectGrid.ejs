@@ -4,6 +4,7 @@
   <% projects.forEach(project => { %>
     <a href="/projects/<%= project.id %>">
       <img class="project-cover <%= projectCoverClass %>" src="<%= project.coverImagePath %>">
+      <p><%= project.title %></p>
     </a>
   <% }) %>
 </div>

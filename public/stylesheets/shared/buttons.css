@@ -56,3 +56,7 @@
   background-color: #bbc5ba;
   border-color: #bbc5ba;
 }
+
+.btn-header {
+  font-size: 1rem !important;
+}

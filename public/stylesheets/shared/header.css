@@ -13,16 +13,21 @@
 }
 
 .header-nav {
+  position: relative;
+  z-index: 100;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5rem;
   background-color: white;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 45px;
   padding-right: 45px;
+  border-bottom: 8px;
+  border-bottom-style: none;
+  border-bottom-style: solid;
 }
 
 .header-nav ul {
@@ -35,6 +40,10 @@
   list-style: none;
 }
 
+.nav-link {
+  padding-top: 10px;
+}
+
 .header-nav li a {
   text-decoration: none;
   color: var(--color-text-dark);
@@ -44,4 +53,5 @@
 
 .header-nav li a:hover, .header-title:hover {
   color: #bbc5ba;
+  text-decoration: underline;
 }

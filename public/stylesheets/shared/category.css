@@ -11,9 +11,12 @@
 
 .project-cover-large {
   --project-cover-width: var(--project-cover-width-large);
+  border-radius: 0.3rem;
 }
 
 .project-grid {
+  position: relative;
+  z-index: 10;
   display: grid;
   justify-content: center;
   grid-gap: 2rem;
