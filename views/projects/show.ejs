@@ -1,0 +1,21 @@
+<h2 class="page-header"><%= project.title %></h2>
+<div class="project-details">
+  <div>
+    <img class="project-cover" src="<%= project.coverImagePath %>">
+    <div class="project-details-btn-grid">
+      <a class="btn btn-primary" href="/projects/<%= project.id %>/edit">Edit</a>
+      <%- include('../partials/deleteForm', { url: `/projects/${project.id}` }) %>
+      <a class="btn btn-primary project-details-category-button" href="/categories/<%= project.category.id %>">View Category</a>
+    </div>
+  </div>
+  <div class="project-details-grid">
+    <div class="project-details-label">Category:</div>
+    <div><%= project.category.name %></div>
+    <div class="project-details-label">Publish Date:</div>
+    <div><%= project.publishDate.toDateString() %></div>
+    <div class="project-details-label">Page Count:</div>
+    <div><%= project.pageCount %></div>
+    <div class="project-details-label">Description:</div>
+    <div><%= project.description %></div>
+  </div>
+</div>

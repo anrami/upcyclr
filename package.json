@@ -1,24 +1,25 @@
 {
-  "name": "upcyclr",
+  "name": "GitHub",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "DevStart": "nodemon server.js"
+    "devStart": "nodemon server.js"
   },
-  "author": "",
+  "keywords": [],
+  "category": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.0",
-    "ejs": "^3.1.7",
-    "express": "^4.18.1",
-    "express-ejs-layouts": "^2.5.1",
-    "mongoose": "^6.3.3",
-    "serve": "^13.0.2"
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.18"
   },
   "devDependencies": {
-    "dotenv": "^16.0.1",
-    "nodemon": "^2.0.16"
+    "dotenv": "^6.2.0",
+    "nodemon": "^1.18.10"
   }
 }

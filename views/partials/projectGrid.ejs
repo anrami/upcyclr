@@ -1,0 +1,9 @@
+<% projectCoverClass = locals.large ? 'project-cover-large' : '' %>
+<% projectGridClass = locals.large ? 'project-grid-large' : '' %>
+<div class="project-grid <%= projectGridClass %>">
+  <% projects.forEach(project => { %>
+    <a href="/projects/<%= project.id %>">
+      <img class="project-cover <%= projectCoverClass %>" src="<%= project.coverImagePath %>">
+    </a>
+  <% }) %>
+</div>
