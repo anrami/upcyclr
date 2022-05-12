@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Book = require('../models/book')
-const Author = require('../models/author')
+const Category = require('../models/category')
 const imageMimeTypes = ['image/jpeg', 'image/png', 'images/gif']
 
 // All Books Route
@@ -36,7 +36,7 @@ router.get('/new', async (req, res) => {
 router.post('/', async (req, res) => {
   const book = new Book({
     title: req.body.title,
-    author: req.body.author,
+    category: req.body.category,
     publishDate: new Date(req.body.publishDate),
     pageCount: req.body.pageCount,
     description: req.body.description
@@ -55,7 +55,7 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const book = await Book.findById(req.params.id)
-                           .populate('author')
+                           .populate('category')
                            .exec()
     res.render('books/show', { book: book })
   } catch {
@@ -80,7 +80,7 @@ router.put('/:id', async (req, res) => {
   try {
     book = await Book.findById(req.params.id)
     book.title = req.body.title
-    book.author = req.body.author
+    book.category = req.body.category
     book.publishDate = new Date(req.body.publishDate)
     book.pageCount = req.body.pageCount
     book.description = req.body.description
@@ -127,9 +127,9 @@ async function renderEditPage(res, book, hasError = false) {
 
 async function renderFormPage(res, book, form, hasError = false) {
   try {
-    const authors = await Author.find({})
+    const categorys = await Category.find({})
     const params = {
-      authors: authors,
+      categorys: categorys,
       book: book
     }
     if (hasError) {

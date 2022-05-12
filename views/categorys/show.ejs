@@ -1,0 +1,10 @@
+<h2 class="page-header"><%= category.name %></h2>
+<div class="btn-row">
+  <a class="btn btn-primary" href="/categorys/<%= category.id %>/edit">Edit</a>
+  <%- include('../partials/deleteForm',
+              { url: `/categorys/${category.id}` }) %>
+</div>
+<% if (booksByCategory.length > 0) { %>
+  <h2 class="page-header">Books By Category</h2>
+  <%- include('../partials/bookGrid', { books: booksByCategory }) %>
+<% } %>

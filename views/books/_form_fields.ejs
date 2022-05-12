@@ -4,13 +4,13 @@
     <input type="text" name="title" value="<%= book.title %>">
   </div>
   <div class="form-item">
-    <label>Author</label>
-    <select name="author">
-      <% authors.forEach(author => { %>
-        <% if (author.id === book.author) { %>
-          <option selected label="<%= author.name %>" value="<%= author.id %>">
+    <label>Category</label>
+    <select name="category">
+      <% categorys.forEach(category => { %>
+        <% if (category.id === book.category) { %>
+          <option selected label="<%= category.name %>" value="<%= category.id %>">
         <% } else { %>
-          <option label="<%= author.name %>" value="<%= author.id %>">
+          <option label="<%= category.name %>" value="<%= category.id %>">
         <% } %>
       <% }) %>
     </select>
