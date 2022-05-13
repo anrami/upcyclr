@@ -2,9 +2,9 @@
 <% projectGridClass = locals.large ? 'project-grid-large' : '' %>
 <div class="project-grid <%= projectGridClass %>">
   <% projects.forEach(project => { %>
-    <a href="/projects/<%= project.id %>">
+    <a style="text-decoration: none;" href="/projects/<%= project.id %>">
       <img class="project-cover <%= projectCoverClass %>" src="<%= project.coverImagePath %>">
-      <p><%= project.title %></p>
+      <p style="margin-top:10px"><%= project.title %> • Submitted by <%= project.author %></p>
     </a>
   <% }) %>
 </div>

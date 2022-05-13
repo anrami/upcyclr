@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 const Populate = require("../utils/autopopulate");
 const User = require("./user");
 
-
 const projectSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -37,7 +36,6 @@ const projectSchema = new mongoose.Schema({
     required: true,
     ref: 'Category'
   },
-  author : { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true}
 })
 
 projectSchema.virtual('coverImagePath').get(function() {
@@ -45,9 +43,5 @@ projectSchema.virtual('coverImagePath').get(function() {
     return `data:${this.coverImageType};charset=utf-8;base64,${this.coverImage.toString('base64')}`
   }
 })
-
-projectSchema
-    .pre('findOne', Populate('author'))
-    .pre('find', Populate('author'))
 
 module.exports = mongoose.model('Project', projectSchema)

@@ -6,7 +6,6 @@ const User = require('../models/user')
 // set layout variables
 router.use(function(req, res, next) {
   res.locals.currentUserId = req.session.userId;
-
   next();
 });
 
@@ -25,17 +24,14 @@ router.get('/login', (req, res, next) => {
   res.render('login');
 });
 
+
 // POST login
 router.post('/login', (req, res, next) => {
   User.authenticate(req.body.username, req.body.password, (err, user) => {
     if (err || !user) {
-      const next_error = new Error("Username or password incorrect");
-      next_error.status = 401;
-
-      return next(next_error);
+      res.render('login', {errorMessage: 'Username or Password is incorrect'});
     } else {
       req.session.userId = user._id;
-
       return res.redirect('/') ;
     }
   });
@@ -55,7 +51,7 @@ router.get('/logout', (req, res, next) => {
 });
 
 // ABOUT PAGE
- router.get('/about', (req, res) => {
+router.get('/about', (req, res) => {
   res.render('about');
 });
 

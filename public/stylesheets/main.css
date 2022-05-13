@@ -51,7 +51,8 @@ body {
 }
 
 .error-message {
-  color: hsl(var(--color-danger-hue), 100%, 50%);
+  text-align: center;
+  color: rgb(126, 0, 0);
 }
 
 .div-dot:after

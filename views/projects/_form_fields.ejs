@@ -27,7 +27,14 @@
     <label>Page Count</label>
     <input type="number" name="pageCount" min="1" value="<%= project.pageCount %>">
   </div>
+  <!--
+  <div class="form-item">
+    <label>Author</label>
+    <input type="text" name="author" value="<%= currentUserId %> ">
+  </div>
+  -->
 </div>
+
 
 <div class="form-row">
   <div class="form-item form-item-no-grow">
@@ -39,3 +46,7 @@
     <textarea name="description"><%= project.description %></textarea>
   </div>
 </div>
+
+<p>
+  <%= typeof currentUserId %>
+  </p>
