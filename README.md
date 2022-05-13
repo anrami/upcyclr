@@ -17,7 +17,7 @@ Upcyclr is a website that lets users submit and share their Upcycling projects. 
 Upcyclr uses a number of technologies work properly:
 
 - [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
+- [Express] - fast node.js network app framework
 - [EJS] - for templating needs
 - [Mongoose] - database
 - [Bcrypt] - hashing passwords
