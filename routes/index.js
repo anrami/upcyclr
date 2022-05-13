@@ -41,4 +41,18 @@ router.post('/login', (req, res, next) => {
   });
 });
 
+// logout
+// the user is loggedn in if they send in a correctly formatted session cookie with their request
+// here we destroy the cookie to log them out
+router.get('/logout', (req, res, next) => {
+  if (req.session) {
+    req.session.destroy((err) => {
+      if (err) return next(err);
+    });
+  }
+
+  return res.redirect('/login');
+});
+
+
 module.exports = router
