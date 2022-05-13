@@ -38,4 +38,8 @@ app.use('/projects', projectRouter)
 app.use('/users', userRouter)
 app.use('/login', loginRouter)
 
+app.use((req, res, next) => {
+  res.render('error-404')
+})
+
 app.listen(process.env.PORT || 3000)

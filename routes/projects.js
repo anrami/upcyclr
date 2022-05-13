@@ -3,6 +3,7 @@ const router = express.Router()
 const Project = require('../models/project')
 const Category = require('../models/category')
 const imageMimeTypes = ['image/jpeg', 'image/png', 'images/gif']
+const auth = require('./helpers/auth')
 
 // All Projects Route
 router.get('/', async (req, res) => {
@@ -28,7 +29,7 @@ router.get('/', async (req, res) => {
 })
 
 // New Project Route
-router.get('/new', async (req, res) => {
+router.get('/new', auth.requireLogin, async (req, res) => {
   renderNewPage(res, new Project())
 })
 

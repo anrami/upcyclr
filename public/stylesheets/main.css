@@ -6,6 +6,7 @@
 @import 'shared/category.css';
 @import 'shared/projects.css';
 @import 'shared/footer.css';
+@import 'shared/error-404.css';
 
 :root {
   font-family: 'Rasa';
@@ -17,13 +18,16 @@
   box-sizing: border-box;
 }
 
+h1 {
+	font-size: 60px !important;
+}
+
 body {
   background: var(--color-background-light);
   margin: 0 !important;
 }
 
 .container {
-  max-width: 1555px;
   margin: auto;
 }
 
@@ -87,8 +91,8 @@ body {
 
 
 .banner-image {
-	height: 30rem;
-	width: 70%;
+	height: 35rem;
+	width: 100%;
 	z-index: 10;
 	position: fixed;
 	display: block;

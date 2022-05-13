@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Category = require('../models/category')
 const Project = require('../models/project')
+const auth = require('./helpers/auth')
 
 // All Categorys Route
 router.get('/', async (req, res) => {
@@ -21,7 +22,7 @@ router.get('/', async (req, res) => {
 })
 
 // New Category Route
-router.get('/new', (req, res) => {
+router.get('/new', auth.requireLogin, (req, res) => {
   res.render('categorys/new', { category: new Category() })
 })
 
