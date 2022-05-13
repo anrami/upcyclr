@@ -1,18 +1,14 @@
-<div>
-    Users Index
+<div class="small-form">
+    <h2>Users Index</h2>
+
+    <div>
+        <% let counter  = 0 %>
+        <% users.forEach(user => { %>
+            <% counter += 1 %>
+            <p><% counter %></p>
+            <p><%= user.username %></p>
+            
+        <% }) %>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
-  
-
-<ul>
-    {{#each users as |user|}}
-      <li>{{user.username}}</li>
-    {{/each}}
-</ul>
-
-<div>
-    <% users.forEach(user => { %>
-
-        <p><%= user.username %></p>
-      
-    <% }) %>
- </div>

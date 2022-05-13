@@ -1,4 +1,4 @@
-<h2 class="page-header"><%= category.name %></h2>
+<h2 class="page-header">Category: <%= category.name %></h2>
 <div class="btn-row">
   <a class="btn btn-primary" href="/categorys/<%= category.id %>/edit">Edit</a>
   <%- include('../partials/deleteForm',
@@ -8,3 +8,5 @@
   <h2 class="page-header">Projects By Category</h2>
   <%- include('../partials/projectGrid', { projects: projectsByCategory }) %>
 <% } %>
+<br>
+<a href="/projects/new">Submit a new Project</a>

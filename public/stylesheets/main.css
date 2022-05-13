@@ -108,3 +108,14 @@ body {
 	url(
 'https://images.pexels.com/photos/2382325/pexels-photo-2382325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
 }
+
+
+.small-form {
+	padding-left: 25rem;
+	padding-right: 25rem;
+}
+
+.x-small-form {
+	padding-left: 30rem;
+	padding-right: 30rem;
+}

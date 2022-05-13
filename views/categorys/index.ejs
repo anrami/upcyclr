@@ -1,24 +1,26 @@
-<h1 class="page-header">Search Categories</h1>
-<form action="/categorys" method="GET">
-  <div class="form-row">
-    <div class="form-item">
-      <label>Name</label>
-      <input type="text" name="name" value="<%= searchOptions.name %>">
+<div class="small-form">
+  <h1 class="page-header">Search Categories</h1>
+  <form action="/categorys" method="GET">
+    <div class="form-row">
+      <div class="form-item">
+        <label>Name</label>
+        <input type="text" name="name" value="<%= searchOptions.name %>">
+      </div>
     </div>
-  </div>
-  <div class="form-row form-row-end">
-    <button class="btn btn-primary" type="submit">Search</button>
-  </div>
-</form>
-<br>
-<% categorys.forEach(category => { %>
-  <div class="category-row">
-    <div class="category-name"><%= category.name %></div>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="/categorys/<%= category.id %>">View</a>
-      <a class="btn btn-primary" href="/categorys/<%= category.id %>/edit">Edit</a>
-      <%- include('../partials/deleteForm',
-                  { url: `/categorys/${category.id}` }) %>
+    <div class="form-row form-row-end">
+      <button class="btn btn-primary" type="submit">Search</button>
     </div>
-  </div>
-<% }) %>
+  </form>
+  <br>
+  <% categorys.forEach(category => { %>
+    <div class="category-row">
+      <div class="category-name"><%= category.name %></div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/categorys/<%= category.id %>">View</a>
+        <a class="btn btn-primary" href="/categorys/<%= category.id %>/edit">Edit</a>
+        <%- include('../partials/deleteForm',
+                    { url: `/categorys/${category.id}` }) %>
+      </div>
+    </div>
+  <% }) %>
+</div>
