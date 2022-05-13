@@ -3,6 +3,9 @@
 
 Upcyclr is a website that lets users submit and share their Upcycling projects. ✨
 
+<img src="https://raw.githubusercontent.com/anrami/upcyclr/main/Homepage.png
+">
+
 ## Features
 
 - CRUD operations from mongodb database
