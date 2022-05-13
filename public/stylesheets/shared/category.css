@@ -5,9 +5,16 @@
 }
 
 .project-cover {
+  transition: all .2s ease-in-out; 
   width: var(--project-cover-width);
   height: calc(var(--project-cover-width) / var(--project-cover-aspect-ratio));
 }
+
+.project-cover:hover {
+  filter: brightness(50%);
+  transform: scale(1.05);
+}
+
 
 .project-cover-large {
   --project-cover-width: var(--project-cover-width-large);

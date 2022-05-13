@@ -1,0 +1,18 @@
+<div>
+    Users Index
+</div>
+  
+
+<ul>
+    {{#each users as |user|}}
+      <li>{{user.username}}</li>
+    {{/each}}
+</ul>
+
+<div>
+    <% users.forEach(user => { %>
+
+        <p><%= user.username %></p>
+      
+    <% }) %>
+ </div>

@@ -5,8 +5,13 @@
       <li class="nav-link"><a href="/categorys">Categories</a></li>
       <li class="nav-link"><a href="/categorys/new">Add Category</a></li>
       <li class="nav-link"><a href="/projects">Explore Projects</a></li>
-      <li><a href="/projects/new"> <button class="btn btn-danger btn-header" type="submit">Login</button></a></li>
+      <li><a href="/users/new"> <button class="btn btn-danger btn-header" type="submit">Login</button></a></li>
       <li style="padding-right: 1.5rem;"><a style="padding-left:0px" href="/projects/new">    <button class="btn btn-primary btn-header" type="submit">Submit Project</button></a></li>
       <li style="padding-left: 1.5rem; border-style: solid; border-width: 0px 0px 0px 2px; border-color: #d3d3d3;" class="nav-link"><a href="/projects">🔎︎</a></li>
+      <% if(currentUserId){ %>
+        <h1>foo</h1>
+      <% } else{ %>  
+        <h1>bar</h1>
+     <% } %>
     </ul>
   </nav>
